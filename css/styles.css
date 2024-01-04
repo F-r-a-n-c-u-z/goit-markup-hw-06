@@ -1,3 +1,6 @@
+.hide {
+  display: none;
+}
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -60,12 +63,35 @@ button {
 /* Индивидуальные */
 /* #region  header-section*/
 .container {
-  width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
+  /* Phone devices */
+  max-width: 320px;
+
+  padding-left: 16px;
+  padding-right: 16px;
+
   margin-left: auto;
   margin-right: auto;
+
+  /* красная рамка  */
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
+
+@media screen and (min-width: 768px) {
+  .container {
+    /* Tablet devices */
+    max-width: 736px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    /* Desktop devices */
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .header {
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -298,23 +324,41 @@ button {
 }
 
 .hero {
-  margin: auto;
+  width: 288px;  
+  margin:  auto;
+  margin-bottom:72px ;
 
-  display: flex;
-  max-width: 496px;
-  margin-bottom: 48px;
-  flex-shrink: 0;
   text-align: center;
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07em;
+  line-height: 1.2em; 
   letter-spacing: 0.02em;
-  color: #fff;
+  text-transform: capitalize;
+  color:#FFF;
+
 }
+@media only screen and (min-width: 768px) {
+  .hero {
+    width: 496px;
+    margin-bottom: 36px;
+
+    font-size: 56px;
+    line-height: 1.07em;
+    text-transform: none;
+    color: #FFF;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .hero{
+    margin-bottom: 48px;
+  }
+}
+
+
 
 .button-hero {
   margin: auto;
-  padding-bottom: 188px;
   display: block;
 
   min-width: 169px;
@@ -352,12 +396,14 @@ button {
 }
 
 .our-section {
-  padding: 120px 0;
+  padding: 96px 0;
+
   background-color: #f4f4fd;
   text-align: center;
   text-transform: capitalize;
   flex-shrink: 0;
 }
+
 h3 {
   color: #2e2f42;
   font-size: 20px;
@@ -370,20 +416,40 @@ h3 {
   letter-spacing: 0.02em;
 }
 .our-team-list {
-  /* width: calc((100%-24px) / 3); */
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+
+  gap: 72px;
   justify-content: center;
 }
+
 .our-team-item {
-  width: calc((100% - 24px * 3) / 4);
+  width: 264px;
+  flex-shrink: 0;
 
   border-radius: 0px 0px 4px 4px;
-  background: var(--WHITE, #fff);
+  background-color: #fff;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+@media only screen and (min-width: 768px) {
+  .our-team-list {
+    gap: 64px 24px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .our-section {
+    padding: 120px 0;
+  }
+  .our-team-list {
+    gap: 0 24px;
+  }
+  .our-team-item {
+    width: calc((100% - 30px * 3) / 4);
+  }
+}
+
 .name-worker {
   padding: 32px 0;
 }
@@ -405,7 +471,6 @@ h3 {
   border-top: none;
 }
 .our-team-h {
-  margin-bottom: 8px;
   color: #2e2f42;
   font-size: 20px;
   font-weight: 500;
@@ -413,29 +478,86 @@ h3 {
   letter-spacing: 0.02em;
 }
 
+.main-group > .our-team-h {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2em;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+
 .our-team-p {
   line-height: 1.5em;
   letter-spacing: 0.02em;
 }
-.top {
-  padding: 120px 0;
+.main-group > .our-team-p {
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
 }
+@media only screen and (min-width: 1158px) {
+  .main-group > .our-team-h {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .main-group > .our-team-p {
+    font-weight: 400;
+  }
+}
+
+.top {
+  padding: 96px 0;
+}
+@media only screen and (min-width: 1158px) {
+  .top {
+    padding: 120px 0;
+  }
+}
+
 .main-text {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 72px 0;
 }
+@media only screen and (min-width: 768px) {
+  .main-text {
+    gap: 72px 24px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .main-text {
+    gap: 24px;
+  }
+}
+
 .main-group {
-  width: calc((100% - 24px * 3) / 4);
+  /* width: calc((100% - 24px * 3) / 4); */
   box-sizing: border-box;
+
+  display: flex;
+  width: 288px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+@media only screen and (min-width: 768px) {
+  .main-group {
+    width: calc((100% - 32px * 1) / 2);
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .main-group {
+    width: calc((100% - 30px * 3) / 4);
+  }
 }
 
 .main-wrepper {
+  display: none;
   width: 264px;
   height: 112px;
   flex-shrink: 0;
   margin-bottom: 8px;
-  display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
@@ -443,26 +565,52 @@ h3 {
   background-color: #f4f4fd;
 }
 
+@media only screen and (min-width: 1158px) {
+  .main-wrepper {
+    display: flex;
+  }
+}
+
 /* Our Portfolio */
 .our-portfolio {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 /* ul */
 .our-portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 48px 24px;
   justify-content: center;
+  gap: 48px;
 }
 /* li */
 .our-portfolio-item {
-  display: block;
+  /* display: block; */
   flex-direction: column;
   align-items: flex-start;
   width: 360px;
   background-color: #fff;
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media only screen and (min-width: 768px) {
+  .our-portfolio-list {
+    gap: 72px 24px;
+  }
+  .our-portfolio-item {
+    width: calc((100% - 32px * 1) / 2);
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .our-portfolio {
+    padding: 120px 0;
+  }
+  .our-portfolio-list {
+    gap: 48px 24px;
+  }
+  .our-portfolio-item {
+    width: calc((100% - 30px * 2) / 3);
+  }
 }
 
 .our-portfolio-p {
@@ -590,11 +738,11 @@ h3 {
   visibility: hidden;
   pointer-events: none;
 }
-.backdrop.is-open {
+/* .backdrop.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
-}
+} */
 
 .modal {
   position: absolute;
@@ -712,7 +860,6 @@ h3 {
   outline: none;
   padding: 8px 16px;
 
-
   width: 100%;
   height: 120px;
   font-size: 12px;
@@ -760,7 +907,6 @@ h3 {
   stroke: rgba(46, 47, 66, 0.4);
 }
 .checkbox-label {
-
   font-size: 12px;
   line-height: 1.17em;
   letter-spacing: 0.04em;
@@ -777,8 +923,7 @@ h3 {
   flex-shrink: 0;
   margin-right: 8px;
 
-  
-  cursor:pointer;
+  cursor: pointer;
   align-items: center;
   justify-content: center;
   gap: 8px;
