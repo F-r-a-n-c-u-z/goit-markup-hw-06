@@ -198,8 +198,7 @@ button {
   }
 }
 
-.header-address-list {
-}
+
 @media only screen and (min-width: 1158px) {
   .header-address-list {
     display: flex;
@@ -275,8 +274,7 @@ button {
   }
 }
 
-.footer-div {
-}
+
 .footer-p {
   text-align: start;
   width: 264px;
@@ -776,8 +774,7 @@ h3 {
 
 /* Footer form */
 
-.footer-wrapper {
-}
+
 .wrapper-p {
   font-weight: 500;
   line-height: 1.5em;
@@ -1174,11 +1171,6 @@ h3 {
   stroke: rgba(0, 0, 0, 0.1);
   fill: #2e2f42;
 }
-.menu-button-icon {
-}
-.mobile-menu-list {
-  /* margin-bottom: 168px; */
-}
 
 .mobile-menu-item:not(:last-child) {
   margin-bottom: 40px;
@@ -1198,8 +1190,6 @@ h3 {
 }
 .mobile-menu-contacts {
   margin-bottom: 48px;
-}
-.mobile-menu-wrapper {
 }
 .mobile-menu-contacts.mobile-menu-item:not(:last-child) {
   margin-bottom: 24px;
