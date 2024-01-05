@@ -861,7 +861,7 @@ h3 {
 }
 
 /* Модальное окно */
-.backdrop.is-open {
+.backdrop{
   position: fixed;
   top: 0;
   left: 0;
