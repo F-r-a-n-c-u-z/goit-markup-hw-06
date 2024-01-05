@@ -887,11 +887,11 @@ h3 {
   visibility: hidden;
   pointer-events: none;
 }
-/* .backdrop.is-open {
+.backdrop.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
-} */
+}
 
 .modal {
   position: absolute;
