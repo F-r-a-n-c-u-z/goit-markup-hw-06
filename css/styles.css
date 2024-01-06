@@ -260,7 +260,6 @@ button {
   padding: 96px 0;
   background: #2e2f42;
 }
-
 @media only screen and (min-width: 768px) {
   .web-footer-container {
     width: 608px;
@@ -271,8 +270,9 @@ button {
 }
 @media only screen and (min-width: 1158px) {
   .web-footer-container {
-    flex-wrap: nowrap;
+    width: 1158px;
     gap: 0;
+    flex-wrap: nowrap;
     padding: 0 15px;
   }
 }
@@ -289,6 +289,11 @@ button {
   fill: #f4f4fd;
 }
 
+@media only screen and (max-width: 767px) {
+   .footer-left{
+    margin-bottom: 72px;
+  }
+}
 @media only screen and (min-width: 768px) {
   .footer-left {
     text-align: left;
@@ -301,6 +306,11 @@ button {
   }
 }
 
+@media only screen and (max-width: 767px) {
+   .footer-block{
+    margin-bottom: 72px;
+  }
+}
 @media only screen and (min-width: 768px) {
   .footer-block {
     margin-right: 80px;
