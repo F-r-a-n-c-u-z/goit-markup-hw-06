@@ -1150,13 +1150,11 @@ h3 {
   padding: 72px 24px 40px 16px;
   background-color: #fff;
 
-  visibility: hidden;
   transform: translateY(100%);
   transition: transform 250ms ease-in, visibility 250ms ease-in;
 }
 .mobeli-mune.is-open {
   transform: translateY(0);
-  visibility: visible;
 }
 
 .mobeli-button {
